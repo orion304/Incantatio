@@ -1,0 +1,127 @@
+name: IncantatioReloaded
+main: main.IncantatioReloaded
+version: 0.0.1
+commands:
+    incantatio:
+        description: Admin tools for IncantatioReloaded
+        aliases: [i, ir, incantatioreloaded]
+        usage: |
+             /<command> reload
+             /<command> maxexp [player]
+             /<command> clearexp [player]
+             /<command> bypassexp [player]
+permissions:
+  incantatio.admin.*:
+    description: Administration commands and admin spells
+    children:
+      incantatio.admin.reload: true
+      incantatio.admin.clearexp: true
+      incantatio.admin.maxexp: true
+      incantatio.admin.bypassexp: true
+  incantatio.spell.*:
+    description: Normal spells
+    children:
+      incantatio.spell.illusion: true
+      incantatio.spell.bubble: true
+      incantatio.spell.sphere: true
+      incantatio.spell.hemisphere: true
+      incantatio.spell.wall: true
+      incantatio.spell.ring: true
+      incantatio.spell.entomb: true
+      incantatio.spell.vanish: true
+      incantatio.spell.disintegrate: true
+      incantatio.spell.hop: true
+      incantatio.spell.breathe: true
+      incantatio.spell.explode: true
+      incantatio.spell.silent: true
+      incantatio.spell.perpetual: true
+      incantatio.spell.replenishwater: true
+      incantatio.spell.disappear: true
+      incantatio.spell.light: true
+      incantatio.spell.mine: true
+      incantatio.spell.mutate: true
+      incantatio.spell.lighting: true
+  incantatio.*:
+    description: Normal permissions
+    children:
+      incantatio.spell.*: true
+ 
+  incantatio.admin.reload:
+    default: op
+  incantatio.admin.clearexp:
+    default: op
+  incantatio.admin.maxexp:
+    default: op
+  incantatio.admin.bypassexp:
+    default: op
+  
+  incantatio.spell.illusion:
+    default: true
+  incantatio.spell.bubble:
+    default: true
+  incantatio.spell.sphere:
+    default: true
+  incantatio.spell.hemisphere:
+    default: true
+  incantatio.spell.wall:
+    default: true
+  incantatio.spell.ring:
+    default: true
+  incantatio.spell.entomb:
+    default: true
+  incantatio.spell.vanish:
+    default: true
+  incantatio.spell.disintegrate:
+    default: true
+  incantatio.spell.hop:
+    default: true
+  incantatio.spell.breathe:
+    default: true
+  incantatio.spell.explode:
+    default: true
+  incantatio.spell.silent:
+    default: true
+  incantatio.spell.perpetual:
+    default: true
+  incantatio.spell.replenishwater:
+    default: true
+  incantatio.spell.disappear:
+    default: true
+  incantatio.spell.light:
+    default: true
+  incantatio.spell.mine:
+    default: true
+  incantatio.spell.mutate:
+    default: true
+  incantatio.spell.lightning:
+    default: true
+  incantatio.spell.heal:
+    default: true
+  incantatio.spell.day:
+    default: op
+  incantatio.spell.night:
+    default: op
+  incantatio.spell.calm:
+    default: op
+  incantatio.spell.rain:
+    default: op
+  incantatio.spell.storm:
+    default: op
+  incantatio.spell.push:
+    default: true
+  incantatio.spell.pull:
+    default: true
+  incantatio.spell.freeze:
+    default: true      
+  incantatio.spell.thaw:
+    default: true
+  incantatio.spell.protect:
+    default: true
+  incantatio.spell.extinguish:
+    default: true
+  incantatio.modification.perpetual:
+    default: true
+  incantatio.modification.silent:
+    default: true
+  incantatio.modification.force:
+    default: true
