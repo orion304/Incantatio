@@ -16,6 +16,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
+import tools.BlockTools;
 import tools.EntityTools;
 import tools.IPlayer;
 import enums.SpellType;
@@ -107,6 +108,12 @@ public class Stop implements Spell {
 		entities.clear();
 		locations.clear();
 		instances.remove(id);
+
+		for (Block block : BlockTools.getBlocksAroundPoint(origin, radius)) {
+			if (!isFrozen(block)) {
+				block.getState().update(true, true);
+			}
+		}
 	}
 
 	private void progress() {
